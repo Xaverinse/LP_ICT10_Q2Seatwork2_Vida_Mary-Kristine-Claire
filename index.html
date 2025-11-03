@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .navbar {
+        background: #0C0E14;
+         font-weight: 100;
+          font-family: 'Montserrat'}
+
+body {background: #f8f5f2;
+    font-family: 'Montserrat';
+    color: #0C0E14;
+    margin: 0;
+    padding: 0;
+  background-image: linear-gradient(to bottom, #B59D73, #f8f5f2);}
+
+.order-container {background: #0C0E14;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    padding: 40px;
+    margin: 80px auto;
+    border: 2px solid linear-gradient(to top, #f8f5f2, #B59D73);}
+
+
+h1 {color: #e6e6e6;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px #B59D73;
+    margin-bottom: 30px;}
+
+h2 {font-weight: 600;
+    color: #e6e6e6;
+    border-left: 6px solid #B59D73;
+    padding-left: 10px;}
+
+.form-control {border-radius: 12px;
+    border: 2px solid #0C0E14;
+    background-color: #e6e6e6;
+    box-shadow: none;}
+
+.form-control:focus {border-color: #B59D73;
+    box-shadow: 0 0 8px #B59D73;}
+
+.form-label {font-weight: 600;
+    color: #e6e6e6;}
+
+.btn {background-color: #e6e6e6;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #B59D73;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;}
+
+#namestuff {font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #e6e6e6;
+    background-color: #B59D73;
+    border-radius: 16px;
+    padding: 15px;
+    border-left: 6px solid #e6e6e6;
+    border-right: 6px solid #e6e6e6;}
+
+.test {background-color: #e6e6e6;
+    color: #B59D73;
+    border-radius: 16px;
+    padding: 15px;
+    font-weight: 800;
+    font-size: large;
+    border-left: 6px solid #B59D73;
+    border-right: 6px solid #B59D73;}
+
+#gradestuff {font-weight: 700;
+    color: #0C0E14;
+    border-radius: 16px;
+    background-color: #B59D73;
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    border: #e6e6e6;}
+
+.btn:hover {background-color: #B59D73;
+    color: #0C0E14;}
+
+img {height: 40px;
+    width: 40px;}
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"> <img src="logo.webp"> Night Raven College</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">GWA Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="soon.html">I Forgot</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="order-container p-4 mb-4  dflex flex-column mx-auto mt-5">
+            <h1 class="mb-4 text-center" style="text-shadow: 2px 2px 4px #ffa09b;">General Weighed Grade Average Calculator</h1>
+                    <div class="mb-6">
+                        <label for="Fname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="Fname" placeholder="Ex: Dire ">
+                    </div>
+                    <div class="mb-6">
+                        <label for="Lname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="Lname" placeholder="Ex: Crowley">
+                    </div>
+
+                    <div class="container py-5">
+            <h2 class="mb-4">Enter Your Grades</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-check subject-item">
+                        <div class="subject-text">
+                        <label for="item1" class="form-label">Science</label>
+                        <input type="number" class="form-control" id="item1" placeholder="Grade">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-check subject-item">
+                        <div class="subject-text">
+                        <label for="item2" class="form-label">English</label>
+                        <input type="number" class="form-control" id="item2" placeholder="Grade">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-6">
+                    <div class="form-check subject-item">
+                        <div class="subject-text">
+                        <label for="item3" class="form-label">Math</label>
+                        <input type="number" class="form-control" id="item3" placeholder="Grade">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-check subject-item">
+                        <div class="subject-text">
+                        <label for="item4" class="form-label">Filipino</label>
+                        <input type="number" class="form-control" id="item4" placeholder="Grade">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-check subject-item">
+                        <div class="subject-text">
+                        <label for="item5" class="form-label">ICT</label>
+                        <input type="number" class="form-control" id="item5" placeholder="Grade">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-check subject-item">
+                        <div class="subject-text">
+                        <label for="item6" class="form-label">PE</label>
+                        <input type="number" class="form-control" id="item6" placeholder="Grade">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="d-grid gap-2 col-md-6 mx-auto mt-4">
+                <button class="btn btn-lg btn-default" type="submit" py-click="create_order">Calculate GWA</button>
+            </div>
+            <br>
+            <div id="namestuff" class="mb-2"></div>
+            <br>
+            <div class="test">
+            <div id="scistuff" class="mb-2"></div>
+                <div id="engstuff" class="mb-2"></div>
+                <div id="mathstuff" class="mb-2"></div>
+                <div id="filstuff" class="mb-2"></div>
+                <div id="ictstuff" class="mb-2"></div>
+                <div id="pestuff" class="mb-2"></div>
+            </div>
+            <br>
+            <div id="gradestuff" class="mb-2"></div>
+        </div>
+    
+    <script type="py" src="main.py"></script>
+</body>
+</html>
